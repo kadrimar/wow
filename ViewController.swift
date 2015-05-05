@@ -98,6 +98,14 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     
+    @IBAction func customAction(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("custom", sender: self)
+    }
     
+    @IBAction func logoutAction(sender: AnyObject) {
+    
+        PFUser.logout()
+    }
 }
 
